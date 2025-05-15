@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="Rhl3lsu7OKJw9RcAbaAb4QrzkHmeSNBqdEagEf35">
+
+    <!--title>Laravel</title-->
+    <title>Infraestructura</title>
+    <!-- Styles -->
+    <link href="http://localhost:8000/css/app.css" rel="stylesheet">
+    <link rel="icon" href="/imagenes/favicon.png" type="image/x-icon" />
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <!-- Collapsed Hamburger 
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button-->
+
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" href="http://localhost:8000">
+                        <Laravel>
+                        Infraestructura
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                        &nbsp;
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                                                    <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    Mazzittelli, Marcela <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="http://localhost:8000/logout"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Salir
+                                        </a>
+
+                                        <form id="logout-form" action="http://localhost:8000/logout" method="POST" style="display: none;">
+                                            <input type="hidden" name="_token" value="Rhl3lsu7OKJw9RcAbaAb4QrzkHmeSNBqdEagEf35">
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+<div class="container">
+<h2>Visitas a Realizar</h2>
+<div class="table-responsive">
+<table class="table">
+	<thead>
+		<tr class="bg-primary"><th>Fecha Programada</th><th>Efector</th><th>Domicilio</th><th>Descripción</th><th>Rubro</th><th>Acciones</th></tr>
+	</thead>
+	<tbody>	
+<tr><td></td><td></td><td></td><td>PRUEBA DEL SISTEMA A BORRAR</td><td>Falta de Agua</td><td><img src='/imagenes/ver.svg' height='15' width='15' title='Ver' onclick='n_pe_ve(1)'>&nbsp;Ver&nbsp;|&nbsp;<img src='/imagenes/editar.png' height='15' width='15' title='Comentar' onclick='n_pe_cm(1)'>&nbsp;Comentar</td></tr><tr><td></td><td></td><td></td><td>xxxx</td><td>Baños</td><td><img src='/imagenes/ver.svg' height='15' width='15' title='Ver' onclick='n_pe_ve(2)'>&nbsp;Ver&nbsp;|&nbsp;<img src='/imagenes/editar.png' height='15' width='15' title='Comentar' onclick='n_pe_cm(2)'>&nbsp;Comentar</td></tr><tr><td></td><td></td><td></td><td>a anular</td><td>Falta de Agua</td><td><img src='/imagenes/ver.svg' height='15' width='15' title='Ver' onclick='n_pe_ve(3)'>&nbsp;Ver&nbsp;|&nbsp;<img src='/imagenes/editar.png' height='15' width='15' title='Comentar' onclick='n_pe_cm(3)'>&nbsp;Comentar</td></tr><tr><td>12/11/2020</td><td></td><td></td><td>no hay luz en todo el edificio</td><td>Electricidad</td><td><img src='/imagenes/ver.svg' height='15' width='15' title='Ver' onclick='n_pe_ve(4)'>&nbsp;Ver&nbsp;|&nbsp;<img src='/imagenes/editar.png' height='15' width='15' title='Comentar' onclick='n_pe_cm(4)'>&nbsp;Comentar</td></tr><tr><td>12/11/2020</td><td></td><td></td><td>segunda prueba</td><td>Falta de Agua</td><td><img src='/imagenes/ver.svg' height='15' width='15' title='Ver' onclick='n_pe_ve(5)'>&nbsp;Ver&nbsp;|&nbsp;<img src='/imagenes/editar.png' height='15' width='15' title='Comentar' onclick='n_pe_cm(5)'>&nbsp;Comentar</td></tr><tr><td>19/11/2020</td><td></td><td></td><td>aaaaaaaaaaaaaaassss</td><td>Electricidad</td><td><img src='/imagenes/ver.svg' height='15' width='15' title='Ver' onclick='n_pe_ve(6)'>&nbsp;Ver&nbsp;|&nbsp;<img src='/imagenes/editar.png' height='15' width='15' title='Comentar' onclick='n_pe_cm(6)'>&nbsp;Comentar</td></tr></tbody>
+</table>
+</div>
+<a href="http://localhost:8000/pedidos/excel_arealizar" class="btn btn-success btn-sm">Excel</a>
+</div>
+    </div>
+    <script src="http://localhost:8000/js/app.js"></script>
+    <script src="http://localhost:8000/js/infra.js"></script>
+</body>
+</html>
