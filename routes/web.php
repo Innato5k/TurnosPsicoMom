@@ -171,3 +171,7 @@ Route::get('/cacheall','ConfigController@cacheAll');
 Route::get('/clearcache',function(){ $exitCode = Artisan::call('cache:clear'); return $exitCode;});
 Route::get('/clearvistas',function(){ $exitCode = Artisan::call('view:clear'); return $exitCode;});
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
