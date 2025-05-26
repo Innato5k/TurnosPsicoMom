@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Fechas;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class FechasController extends Controller
@@ -181,6 +181,7 @@ class FechasController extends Controller
     public function show(Request $request)
     {
         $data = DB::select( DB::raw('SELECT NOW() AS fecha') );
+        
         $hoy=$data[0]->fecha;
         $fechas=Fechas::whereYear('fecha',$request->anio)->whereMonth('fecha',$request->mes)->orderBy('fecha','asc')->select('id','fecha','dia_semana','laborable','observaciones',DB::raw('(select count(*) from turnos where turnos.fecha=fechas.fecha and turnos.paciente>0) as cantidad'))->get();
         return view('fechas/calendario',compact('fechas'))->with(['anio' => $request->anio, 'mes' => $request->mes,'hoy' => $hoy]);
@@ -195,6 +196,7 @@ class FechasController extends Controller
     public function edit()
     {
         $data = DB::select( DB::raw('SELECT NOW() AS fecha') );
+
         $hoy=$data[0]->fecha;
         $data = DB::select( DB::raw('SELECT year(NOW()) AS anio') );
         $anio=$data[0]->anio;

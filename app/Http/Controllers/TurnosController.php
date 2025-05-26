@@ -7,7 +7,7 @@ use App\Fechas;
 use App\Padron;
 use App\Cancelaciones;
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
    
 use App\Mail\Notificacion;
@@ -140,7 +140,7 @@ class TurnosController extends Controller
     {
         $turnos=Turnos::leftJoin('fechas','turnos.fecha','fechas.fecha')->whereraw("paciente is null and hora between '".$request->desde."' and '".$request->hasta."' and turnos.fecha>curdate() and bloqueado=0 and laborable=1")->select('turnos.id','fechas.dia_semana','turnos.fecha','turnos.hora',DB::raw("(select concat(apellido,', ',nombre) from padrons where estado=3 and ((ds_1=fechas.dia_semana and hora_1=turnos.hora) or (ds_2=fechas.dia_semana and hora_2=turnos.hora))) as quincenal"))->orderBy('turnos.fecha','asc')->orderBy('turnos.hora','asc')->get();
         return view('turnos/disponibles',compact('turnos'));
-    }
+    }   
 
     public function preasignar($id){
         $turno=Turnos::find($id);

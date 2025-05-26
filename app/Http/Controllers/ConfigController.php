@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Artisan;
+use Illuminate\Support\Facades\Artisan;
 use GuzzleHttp\Client;
 class ConfigController extends Controller
 {

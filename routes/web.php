@@ -1,4 +1,7 @@
 <?php
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +15,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 // pacientes
@@ -41,7 +44,7 @@ Route::get('/padron/pordocumento/{documento}','PadronController@pordocumento');
 Route::get('/padron/porid/{id}','PadronController@porid');
 
 // calendario
-Route::get('/calendario','FechasController@edit');
+Route::get('/	','FechasController@edit');
 Route::post('/calendario','FechasController@show');
 Route::get('/calendario/bloquear/{id}','FechasController@bloquear');
 Route::post('/calendario/bloquear','FechasController@bloquear_do');

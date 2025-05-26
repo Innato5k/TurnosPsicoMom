@@ -8,7 +8,7 @@ use App\Localidades;
 use App\Provincias;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 class PadronController extends Controller
 {
     public function __construct()

@@ -4,9 +4,7 @@ use App\Padron;
 use App\Localidades;
 use App\Provincias;
 use App\User;
-use DB; 
-
-
+use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Concerns\FromView;
 use Illuminate\Contracts\View\View;
 //use Maatwebsite\Excel\Concerns\WithColumnWidths;

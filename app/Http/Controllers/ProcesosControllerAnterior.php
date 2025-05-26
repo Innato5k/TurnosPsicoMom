@@ -6,7 +6,7 @@ use App\Procesos;
 use App\Turnos;
 use App\Fechas;
 use App\Padron;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Mail\Recordatorio;
 use Illuminate\Support\Facades\Mail;

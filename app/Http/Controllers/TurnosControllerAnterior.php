@@ -7,7 +7,7 @@ use App\Fechas;
 use App\Padron;
 use App\Cancelaciones;
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
    
 use App\Mail\Notificacion;

@@ -8,7 +8,7 @@ use Illuminate\Contracts\View\View;
 use App\Padron;
 use App\Localidades;
 use App\Provincias;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class PadronExport implements FromView, ShouldAutoSize
 {

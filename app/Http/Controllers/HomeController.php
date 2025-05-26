@@ -9,7 +9,7 @@ use App\Exports\CumplesExport;
 use App\Exports\TurnosExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\CancelacionesExport;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
